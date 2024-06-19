@@ -1,0 +1,42 @@
+[
+  {
+    "number": "27",
+    "title": "Salm\u00e3o",
+    "image": "resources/img/27.png"
+  },
+  {
+    "number": "28",
+    "title": "Atum",
+    "image": "resources/img/28.png"
+  },
+  {
+    "number": "29",
+    "title": "Gambas",
+    "image": "resources/img/29.png"
+  },
+  {
+    "number": "30",
+    "title": "Gambas Panadas",
+    "image": "resources/img/30.png"
+  },
+  {
+    "number": "31",
+    "title": "Pepino",
+    "image": "resources/img/31.png"
+  },
+  {
+    "number": "32",
+    "title": "Morangos",
+    "image": "resources/img/32.png"
+  },
+  {
+    "number": "33",
+    "title": "Frango Panado",
+    "image": "resources/img/33.png"
+  },
+  {
+    "number": "34",
+    "title": "Manga",
+    "image": "resources/img/34.png"
+  }
+]

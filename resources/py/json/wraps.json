@@ -1,0 +1,17 @@
+[
+  {
+    "number": "w1",
+    "title": "Frango Panado",
+    "image": "resources/img/w1.jpg"
+  },
+  {
+    "number": "w2",
+    "title": "Salm\u00e3o",
+    "image": "resources/img/w2.jpg"
+  },
+  {
+    "number": "w3",
+    "title": "Gambas Panadas",
+    "image": "resources/img/w3.jpg"
+  }
+]

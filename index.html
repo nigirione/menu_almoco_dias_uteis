@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel = "shortcut icon" href="resources/img/miniLogo.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIGIRI-ONE</title>
+  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="resources/js/functions.js"></script>
+</head>
+<body>
+
+  <header class="sticky-header">
+    <div class="header">
+      <div class="logo">
+        <img src="resources/img/logo.jpg" alt="NIGIRI-ONE RESTAURANTE JAPONÊS" class="alt-text">
+      </div>    
+    </div>
+  </header>
+
+
+  <div class="content">
+    <div class="popup" id="popup_buffet">
+      <div class="overlay"></div>
+      <div class="content_popup">
+        <div class="close-btn" onclick="togglePopupMenu('popup_buffet')">&times;</div>
+        <h1>BUFFET À LA CARTE</h1>
+        <p>Na opção <strong>Buffet*</strong> pode escolher tudo o que quiser sem limites.</p>
+        <p><strong>15.95€ / adulto </strong></p>
+        <p><strong> 8.00€ / criança (4 a 9 anos) </strong></p>
+        <p>*Bebidas e Cafés não incluídos.</p>
+        <p><strong>Bom Apetite!</strong></p>
+        <p>(Estime a comida. Obrigado!)</p>
+      </div>
+    </div>
+
+    <button class="popups" onclick="togglePopupMenu('popup_buffet')">BUFFET À LA CARTE <i class="fa-solid fa-circle-info fa-xs"></i> </button>
+
+    <div class="content_price">
+      <p> <strong>15.95€ / pessoa </strong></p>
+      <p> <strong>8.00€ / crianças (4 a 9 anos) </strong></p>
+    </div>
+
+    <div class="red-line"></div>
+
+    <div class="popup" id="popup_menu">
+      <div class="overlay"></div>
+      <div class="content_popup">
+        <div class="close-btn" onclick="togglePopupMenu('popup_menu')">&times;</div>
+        <h1>MENU DE 4 PRATOS</h1>
+        <p>Na opção <strong>Menu*</strong> pode escolher <strong>4</strong> pratos à sua escolha.</p>
+        <p> (4 números da Carta)</p>
+        <p><strong>9.50€ / menu </strong></p>
+        <p>*Bebidas e Cafés não incluídos.</p>
+        <p><strong>Bom Apetite!</strong></p>
+        <p>(Estime a comida. Obrigado!)</p>
+      </div>
+    </div>
+
+    <button class="popups" onclick="togglePopupMenu('popup_menu')">MENU DE 4 PRATOS <i class="fa-solid fa-circle-info fa-xs"></i></button>
+
+    <div class="content_price">
+      <p> <strong>9.50€ / menu </strong></p>
+    </div>
+
+    <p>Bebidas e café não incluídos no <strong>BUFFET</strong> e no <strong>MENU</strong>.</p>
+
+    <div class="information">
+      <p>Mesas com <strong>mais que uma pessoa</strong> servimos apenas <strong>BUFFET</strong> ou apenas <strong>MENU</strong>.</p>
+      <p>Os nossos produtos podem conter molhos e temperos específicos.</p>
+      <p>(as imagens deste menu são meramente ilustrativas)</p>
+      <p> <strong>Carta válida para almoços nos dias úteis</strong></p>
+    </div>
+  </div>
+
+
+  <div class="body">
+
+    <!-- Sushi -->
+    <div>
+      <div>
+        <p class="strong">Nigiri - 2 peças</p>
+
+        <div id="nigiri" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/nigiri.json', 'nigiri' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Sashimi - 5 peças</p>
+
+        <div id="sashimi" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/sashimi.json', 'sashimi' ,'dishes-item');
+          </script>
+      </div>
+      
+      <div>
+        <p class="strong">Maki - 4 peças</p>
+
+        <div id="maki" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/maki.json', 'maki' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Queijo - 2 peças</p>
+
+        <div id="queijo" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/queijo.json', 'queijo' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Ovo - 2 peças</p>
+
+        <div id="ovo" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/ovo.json', 'ovo' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Califórnia - 4 peças</p>
+
+        <div id="california" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/california.json', 'california' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Wraps - 2 peças</p>
+
+        <div id="wraps" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/wraps.json', 'wraps' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Rolo Grande - 3 peças</p>
+
+        <div id="big_roles" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/big_roles.json', 'big_roles' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Temaki - 1 peça</p>
+        <div class="temaki_div_left">
+          <div class="temaki_block">
+
+            <section>
+              <article class="temaki_item">
+                <p class="drinks_name"><strong>46</strong> - Salmão</p>
+              </article>
+              <article class="temaki_item">
+                <p class="drinks_name"><strong>47</strong> - Atum</p>
+              </article>
+              <article class="temaki_item">
+                <p class="drinks_name"><strong>48</strong> - Delícias do Mar</p>
+              </article>
+              <article class="temaki_item">
+                <p class="drinks_name"><strong>49</strong> - Vegetais</p>
+              </article>
+              <article class="temaki_item">
+                <p class="drinks_name"><strong>50</strong> - Frutas</p>
+              </article>
+            </section>
+          </div>
+        </div>
+
+        <div class="temaki_div_right">
+          <div class="temaki_img">
+            <img src="resources/img/temaki.jpg" alt="Temaki img">
+          </div>
+        </div>
+
+      </div>
+      
+      <div>
+        <div class="maki_slim_roles_div_start"></div>
+        <p class="strong">Maki Slim - 2 peças</p>
+
+        <div id="slim" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/slim.json', 'slim' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Sushi Picante</p>
+
+        <div id="spicy" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/spicy.json', 'spicy' ,'dishes-item');
+          </script>
+      </div>
+      
+      <div>
+        <p class="strong">Combinados</p>
+
+        <div id="combi" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/combi.json', 'combi' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Diversos</p>
+
+        <div id="varied" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/varied.json', 'varied' ,'dishes-item');
+          </script>
+      </div>
+
+    </div>
+
+    <div class="centered-content">
+      <div class="logo-black">
+          <img src="resources/img/logo_black_round_shape.png" alt="NIGIRI-ONE RESTAURANTE JAPONÊS">
+      </div>
+    </div>  
+
+    <!-- Kitchen -->
+    <div>
+      <div>
+        <p class="strong">Cozinha</p>
+
+        <div id="kitchen" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/kitchen.json', 'kitchen' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Fritos</p>
+
+        <div id="fried" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/fried.json', 'fried' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Sopas</p>
+
+        <div id="soup" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/soups.json', 'soup' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Grelhados</p>
+
+        <div id="grilled" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/grilled.json', 'grilled' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Yakitori - 2 peças</p>
+
+        <div id="yakitori" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/yakitori.json', 'yakitori' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Saladas</p>
+
+        <div id="salad" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/salad.json', 'salad' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Donburi</p>
+
+        <div id="donburi" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/donburi.json', 'donburi' ,'dishes-item');
+          </script>
+      </div>
+    </div>
+
+    <!-- Dessert -->
+    <div>
+      <div>
+        <p class="strong">Sobremesas</p>
+
+        <div id="dessert" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/dessert.json', 'dessert' ,'dishes-item');
+          </script>
+      </div>
+
+      <div>
+        <p class="strong">Sobremesas Fora Da Carta</p>
+
+        <div id="dessert_out" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/dessert_out_of_list.json', 'dessert_out' ,'dishes-item');
+          </script>
+      </div>
+
+    </div>
+    
+
+    <div class="centered-content">
+      <div class="logo-white">
+          <img src="resources/img/logo_white.png" alt="NIGIRI-ONE RESTAURANTE JAPONÊS">
+      </div>
+    </div>  
+
+
+    <p class="strong">Bebidas</p>
+
+    <div class="drinks_div_left">
+      <div class="drinks">
+
+        <section>
+          <h2>Aperitivos</h2>
+          <hr>
+          <article class="item">
+            <p class="drinks_name">Licor Beirão</p><p class="price">3.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Martini</p><p class="price">3.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Vinho Porto</p><p class="price">3.50€</p>
+          </article>
+        </section>
+
+
+        <section>
+          <h2>Refrigerantes / Sangria / Cafés</h2>
+          <hr>
+          <article class="item">
+            <p class="drinks_name">Sumo de Laranja Natural</p><p class="price">2.70€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Sagres</p><p class="price">1.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">SuperBock</p><p class="price">1.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Cerveja sem Álcool</p><p class="price">1.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Somersby</p><p class="price">2.30€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Água 0.5L</p><p class="price">1.40€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Água das Pedras</p><p class="price">1.40€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Coca Cola</p><p class="price">1.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Coca Cola Zero</p><p class="price">1.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">7Up</p><p class="price">1.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Fanta (Laranja)</p><p class="price">1.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Sumol (Laranja ou Ananás)</p><p class="price">1.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Guaraná</p><p class="price">1.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Ice Tea</p><p class="price">1.95€</p>
+          </article>
+
+          <article class="item">
+            <p class="drinks_name">Sangria 0.5L (Tinto ou Branco)</p><p class="price">7.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Sangria 1.0L (Tinto ou Branco)</p><p class="price">10.50€</p>
+          </article>
+
+          <article class="item">
+            <p class="drinks_name">Café</p><p class="price">0.85€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Descafeinado</p><p class="price">0.85€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Café com Leite</p><p class="price">1.30€</p>
+          </article>
+        </section>
+
+        <section>
+          <h2>Bebidas Japonesas</h2>
+          <hr>
+          <article class="item">
+            <p class="drinks_name">Sake (Quente ou Frio)</p><p class="price">2.85€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Cerveja Japonesa (Sapporo)</p><p class="price">2.75€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Cerveja TsingTao</p><p class="price">2.75€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Chá Quente (Verde ou Jasmim)</p><p class="price">2.10€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Chá Frio</p><p class="price">2.65€</p>
+          </article>
+        </section>
+      
+      </div>
+
+    </div>
+
+
+    <div class="drinks_div_right">
+
+      <div class="drinks">
+        <section>
+          <h2>Rosé</h2>
+          <hr>
+          <article class="item">
+            <p class="drinks_name">Mateus</p><p class="price">5.95€ / 9.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Lances</p><p class="price">9.95€</p>
+          </article>
+        </section>
+        
+
+        <section>
+          <h2>Verde</h2>
+          <hr>
+          <article class="item">
+            <p class="drinks_name">Casal Garcia</p><p class="price">5.95€ / 9.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Quinta da Aveleta</p><p class="price">6.50€ / 10.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Muralhas</p><p class="price">11.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Gazela</p><p class="price">9.95€</p>
+          </article>
+        </section>
+
+
+        <section>
+          <h2>Tinto</h2>
+          <hr>
+          <article class="item">
+            <p class="drinks_name">J.P</p><p class="price">5.50€ / 8.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Versatil</p><p class="price">8.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Borba</p><p class="price">8.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Monte Velho</p><p class="price">6.95€ / 11.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Periquita</p><p class="price">5.95€ / 10.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">E.A</p><p class="price">6.50€ / 11.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Chaminé</p><p class="price">14.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Duas Quintas</p><p class="price">19.95€</p>
+          </article>
+        </section>
+
+        <section>
+          <h2>Tinto</h2>
+          <hr>
+          <article class="item">
+            <p class="drinks_name">J.P</p><p class="price">5.50€ / 8.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Borba</p><p class="price">8.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Monte Velho</p><p class="price">6.95€ / 11.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">João Pires</p><p class="price">11.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Planalto</p><p class="price">12.95€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Duas Quintas</p><p class="price">19.95€</p>
+          </article>
+        </section>
+
+        <section>
+          <h2>Whiski</h2>
+          <hr>
+          <article class="item">
+            <p class="drinks_name">Whiski JB</p><p class="price">4.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">W.Lawson´s</p><p class="price">4.50€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Logan (12anos)</p><p class="price">5.20€</p>
+          </article>
+          <article class="item">
+            <p class="drinks_name">Chivas (12anos)</p><p class="price">5.20€</p>
+          </article>
+        </section>
+      </div>
+    </div>
+
+    
+  
+  </div>  
+
+      
+
+
+
+
+    
+  
+</body>
+</html>

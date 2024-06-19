@@ -1,0 +1,27 @@
+[
+  {
+    "number": "A1",
+    "title": "Gambas",
+    "image": "resources/img/A1.png"
+  },
+  {
+    "number": "A2",
+    "title": "Vaca",
+    "image": "resources/img/A2.png"
+  },
+  {
+    "number": "A3",
+    "title": "Frango",
+    "image": "resources/img/A3.png"
+  },
+  {
+    "number": "A4",
+    "title": "Salm\u00e3o",
+    "image": "resources/img/A4.png"
+  },
+  {
+    "number": "A5",
+    "title": "Atum",
+    "image": "resources/img/A5.png"
+  }
+]
