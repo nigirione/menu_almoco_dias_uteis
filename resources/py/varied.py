@@ -26,6 +26,7 @@ menu_items = [
   {"number": "B10","title": "Delícias e Panado de Gambas","pieces": "4 Peças" , "image": "resources/img/B10.png"},
   {"number": "B11","title": "Morangos e Frutas","pieces": "4 Peças" , "image": "resources/img/B11.png"},
   {"number": "B12","title": "Manga e Frutas","pieces": "4 Peças" , "image": "resources/img/B12.png"},
+  {"number": "B13","title": "Gunkan de Frutas","pieces": "2 Peças" , "image": "resources/img/B13.jpg"},
   {"number": "B14","title": "Futomaki Misto","pieces": "2 Peças" , "image": "resources/img/B14.png"},
   {"number": "B15","title": "Delícias e Batata Frita","pieces": "4 Peças" , "image": "resources/img/B15.png"},
   {"number": "B16","title": "Panado de Frango e Cebola","pieces": "4 Peças" , "image": "resources/img/B16.png"},
