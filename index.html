@@ -14,13 +14,17 @@
   <header class="sticky-header">
     <div class="header">
       <div class="logo">
-        <img src="resources/img/logo.jpg" alt="NIGIRI-ONE RESTAURANTE JAPONÊS" class="alt-text">
+        <img src="resources/img/logo_good.png"  class="logo-header" alt="NIGIRI-ONE RESTAURANTE JAPONÊS" class="alt-text">
       </div>    
     </div>
   </header>
 
 
   <div class="content">
+    <img src="resources/img/3_sushi.jpg" class="img_3_sushi">
+    <p> <strong>
+      <span class="carte-info">ALMOÇOS NOS DIAS ÚTEIS</span> 
+    </strong></p>
     <div class="popup" id="popup_buffet">
       <div class="overlay"></div>
       <div class="content_popup">
@@ -30,7 +34,7 @@
         <p><strong>15.95€ / adulto </strong></p>
         <p><strong> 8.00€ / criança (4 a 9 anos) </strong></p>
         <p>*Bebidas e Cafés não incluídos.</p>
-        <p><strong>Bom Apetite!</strong></p>
+        <p><strong style="color: rgb(185, 49, 51);">Bom Apetite!</strong></p>
         <p>(Estime a comida. Obrigado!)</p>
       </div>
     </div>
@@ -38,40 +42,58 @@
     <button class="popups" onclick="togglePopupMenu('popup_buffet')">BUFFET À LA CARTE <i class="fa-solid fa-circle-info fa-xs"></i> </button>
 
     <div class="content_price">
-      <p> <strong>15.95€ / pessoa </strong></p>
-      <p> <strong>8.00€ / crianças (4 a 9 anos) </strong></p>
-    </div>
+      <p> <strong>
+        <span class="price">15.95€</span> 
+        <span class="description">/ pessoa</span>
+      </strong></p>
 
-    <div class="red-line"></div>
+      <p> <strong>
+        <span class="price">8.00€ </span> 
+        <span class="description">/ crianças (4 a 9 anos)</span>
+      </strong></p>
+    </div>
 
     <div class="popup" id="popup_menu">
       <div class="overlay"></div>
       <div class="content_popup">
         <div class="close-btn" onclick="togglePopupMenu('popup_menu')">&times;</div>
-        <h1>MENU DE 4 PRATOS</h1>
+        <h1>MENU DE 4 NÚMEROS</h1>
         <p>Na opção <strong>Menu*</strong> pode escolher <strong>4</strong> pratos à sua escolha.</p>
         <p> (4 números da Carta)</p>
         <p><strong>9.50€ / menu </strong></p>
         <p>*Bebidas e Cafés não incluídos.</p>
-        <p><strong>Bom Apetite!</strong></p>
+        <p><strong style="color: rgb(185, 49, 51);">Bom Apetite!</strong></p>
         <p>(Estime a comida. Obrigado!)</p>
       </div>
     </div>
 
-    <button class="popups" onclick="togglePopupMenu('popup_menu')">MENU DE 4 PRATOS <i class="fa-solid fa-circle-info fa-xs"></i></button>
+    <button class="popups" onclick="togglePopupMenu('popup_menu')">MENU DE 4 NÚMEROS <i class="fa-solid fa-circle-info fa-xs"></i></button>
 
     <div class="content_price">
-      <p> <strong>9.50€ / menu </strong></p>
+      <p> <strong>
+        <span class="price">9.50€ </span> 
+        <span class="description">/ menu</span>
+      </strong></p>
     </div>
 
     <p>Bebidas e café não incluídos no <strong>BUFFET</strong> e no <strong>MENU</strong>.</p>
 
-    <div class="information">
-      <p>Mesas com <strong>mais que uma pessoa</strong> servimos apenas <strong>BUFFET</strong> ou apenas <strong>MENU</strong>.</p>
-      <p>Os nossos produtos podem conter molhos e temperos específicos.</p>
-      <p>(as imagens deste menu são meramente ilustrativas)</p>
-      <p> <strong>Carta válida para almoços nos dias úteis</strong></p>
-    </div>
+    <img src="resources/img/allergen_icons.png" alt="allergen_icons" class="img_allergen_icons">
+    <p class="strong_red_for_info">Alergénios</p>
+    <p class="allergen_info">Se tiver alergia e/ou intolerância alimentar, diga-nos do que é alérgico e teremos todo o cuidado em preparar o seu prato.</p>
+
+    <div class="information_pic">
+      <div class="information">
+        <p>Mesas com <strong>mais que uma pessoa</strong> servimos apenas <strong>BUFFET</strong> ou apenas <strong>MENU</strong>.</p>
+        <p>Os nossos produtos podem conter molhos e temperos específicos.</p>
+        <p class="strong_for_info">POR FAVOR NÃO DESPERDICE COMIDA.</p>
+        <p class="strong_for_info">Não é permitido levar sobras de comida.Todos os pratos pedidos e não consumidos serão cobrados.
+          <span class="strong_red_for_info">0.75€ / peça</span>
+        </p>
+        <p>(as imagens deste menu são meramente ilustrativas)</p>
+        <h4 class="strong_red_for_info">BOM APETITE!</h4>
+      </div>
+    </div>  
   </div>
 
 
