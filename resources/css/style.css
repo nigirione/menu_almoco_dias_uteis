@@ -11,6 +11,8 @@
 body {
   padding: 25px;
   margin-top: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 .logo-header{
@@ -288,6 +290,15 @@ body {
 }
 /* --------------drinks-----------------*/
 
+.img_drinks{
+  margin-left: 20px;
+  margin-left: 70px;
+  padding: 10px;
+  padding-left: 20px;
+  width: 400px;
+  height: auto;
+  border-radius: 30%;
+}
 
 .drinks_menu section{
   margin-bottom: 20px
@@ -437,7 +448,30 @@ body {
   margin-bottom: 30px;
 }
 
+/*----------footer---------------*/
+footer {
+  clear: both;
+  text-align: center;
+  padding: 10px;
+  background-color: #000000;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  color: #fff;
+}
+
+footer p{
+  color: #fff;
+}
+
+
 @media screen and (max-width: 768px) {
+  
+  body {
+    padding: 25px;
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   
   .img_3_sushi{
     width: 200px;
@@ -669,5 +703,18 @@ body {
 
   .drinks_menu section{
     margin-bottom: 10px
+  }
+
+  .img_drinks{
+    margin-top: 20px;
+    padding: 0px;
+    padding-left: 0px;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 200px;
+    width: 200px;
+    width: 150px;
+    height: auto;
+    border-radius: 30%;
   }
 }
