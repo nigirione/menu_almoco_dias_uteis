@@ -72,7 +72,6 @@
     <div class="content_price">
       <p> <strong>
         <span class="price">9.50€ </span> 
-        <span class="description">/ menu</span>
       </strong></p>
     </div>
 
@@ -101,6 +100,16 @@
 
     <!-- Sushi -->
     <div>
+
+      <div>
+        <p class="strong">Novidades</p>
+
+        <div id="new" class="menu-container"></div>
+          <script>
+            fetchAndDisplayMenu('resources/py/json/new_dishes.json', 'new' ,'dishes-item');
+          </script>
+      </div>
+
       <div>
         <p class="strong">Nigiri - 2 peças</p>
 
