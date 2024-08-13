@@ -96,3 +96,51 @@ function fetchAndDisplayMenu(jsonFile, menuDivId, menuDivClass) {
     })
     .catch(error => console.error('Error fetching menu data:', error));
 }
+
+
+// Sample menu items for search
+const menuItems = [
+  { id: 'new_new', name: 'Novidades' },
+  { id: 'nigiri', name: 'Nigiri' },
+  { id: 'sashimi', name: 'Sashimi / Maki' },
+  { id: 'queijo', name: 'Queijo / Ovo' },
+  { id: 'california', name: 'Califórnia / Wraps' },
+  { id: 'wraps', name: 'Rolos Grandes / Temaki' },
+  { id: 'temaki', name: 'Maki Slim / Sushi Picante' },
+  { id: 'slim', name: 'Combinados' },
+  { id: 'combi', name: 'Diversos' },
+  { id: 'kitchen_new', name: 'Cozinha' },
+  { id: 'donburi', name: 'Sobremesas' },
+  { id: 'drinks_new', name: 'Bebidas' },
+];
+// Function to toggle the dropdown menu
+function toggleDropdown() {
+  const dropdown = document.getElementById('dropdown');
+  dropdown.classList.toggle('show');
+  populateDropdown();
+}
+// Function to populate the dropdown with menu items
+function populateDropdown() {
+  const dropdown = document.getElementById('dropdown');
+  dropdown.innerHTML = ''; // Clear existing items
+  menuItems.forEach(item => {
+      const menuItemElement = document.createElement('div');
+      menuItemElement.textContent = item.name;
+      menuItemElement.onclick = () => scrollToSection(item.id);
+      dropdown.appendChild(menuItemElement);
+  });
+}
+// Function to scroll to a section
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('dropdown').classList.remove('show'); // Hide dropdown after selection
+}
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('button')) {
+      const dropdown = document.getElementById('dropdown');
+      if (dropdown.classList.contains('show')) {
+          dropdown.classList.remove('show');
+      }
+  }
+}

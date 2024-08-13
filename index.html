@@ -15,7 +15,12 @@
     <div class="header">
       <div class="logo">
         <img src="resources/img/logo_good.png"  class="logo-header" alt="NIGIRI-ONE RESTAURANTE JAPONÊS" class="alt-text">
-      </div>    
+      </div>
+      
+      <div class="filter_content">
+        <button  class="search" onclick="toggleDropdown()">Procurar<i class="fa fa-search custom-search-icon"></i></button>
+        <div id="dropdown" class="dropdown-content"></div>
+      </div>
     </div>
   </header>
 
@@ -91,6 +96,9 @@
         </p>
         <p>(as imagens deste menu são meramente ilustrativas)</p>
         <h4 class="strong_red_for_info">BOM APETITE!</h4>
+
+         <!-- use for visual effect -->
+         <div id = "new_new"></div>
       </div>
     </div>  
   </div>
@@ -174,7 +182,7 @@
       </div>
 
       <div>
-        <p class="strong">Rolo Grande - 3 peças</p>
+        <p class="strong">Rolos Grande - 3 peças</p>
 
         <div id="big_roles" class="menu-container"></div>
           <script>
@@ -184,7 +192,7 @@
 
       <div>
         <p class="strong">Temaki - 1 peça</p>
-        <div class="temaki_div_left">
+        <div  id= "temaki"class="temaki_div_left">
           <div class="temaki_block">
 
             <section>
@@ -254,7 +262,8 @@
 
     </div>
 
-    <div class="centered-content">
+      <!-- only for visual effect -->
+    <div id = "kitchen_new" class="centered-content">
       <div class="logo-black">
           <img src="resources/img/logo_black_round_shape.png" alt="NIGIRI-ONE RESTAURANTE JAPONÊS">
       </div>
@@ -347,9 +356,9 @@
       </div>
 
     </div>
-    
-
-    <div class="centered-content">
+  
+    <!-- only for visual effect -->
+    <div id ="drinks_new"class="centered-content">
       <div class="logo-white">
           <img src="resources/img/logo_white.png" alt="NIGIRI-ONE RESTAURANTE JAPONÊS">
       </div>
@@ -357,7 +366,7 @@
 
     <p class="strong">Bebidas</p>
     
-    <div class="drinks_div_left">
+    <div  id="drinks" class="drinks_div_left">
       <div class="drinks">
 
         <section>
