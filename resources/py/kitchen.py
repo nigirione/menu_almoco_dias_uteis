@@ -31,7 +31,7 @@ menu_items = [
   {"number": "616","title": "Udon Frito c/ Gambas","image": "resources/img/616.png"},
   {"number": "617","title": "Massa","image": "resources/img/617.png"},
   {"number": "618","title": "Massa de Arroz","image": "resources/img/618.png"},
-  {"number": "619","title": "Raviolios","image": "resources/img/619.png"}
+  {"number": "619","title": "Raviolios (Porco)","image": "resources/img/619.png"}
   
 
 ]
