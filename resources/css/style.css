@@ -161,7 +161,7 @@ body {
   padding-bottom: 40px;
   margin-left: 150px;
   margin-right: 150px;
-  background-image: url('../img/flores_de_cereja.png'); /* Path to your image */
+  background-image: url('../img/sakura2.jpg'); /* Path to your image */
   background-size: cover; /* Ensures the image covers the entire element */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-position: center; /* Centers the image */
@@ -545,7 +545,7 @@ footer p{
     padding-right: 30px;
     padding-bottom: 40px;
     margin: 0px 0px;
-    background-image: url('../img/flores_de_cereja.png'); /* Path to your image */
+    background-image: url('../img/sakura2.jpg'); /* Path to your image */
     background-size: cover; /* Ensures the image covers the entire element */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image */
