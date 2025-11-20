@@ -22,16 +22,25 @@ function fetchAndDisplayMenu(jsonFile, menuDivId, menuDivClass) {
               <p><strong style="color: rgb(210, 55, 57); font-size: 12px;">Disponível só no Buffet à La Carte</strong></p>
             `;
           }
-        }else if (menuDivId === 'nigiri' || menuDivId === 'sashimi' ) {
+        }else if (menuDivId === 'nigiri' || menuDivId === 'sashimi' || menuDivId === 'california' ) {
           // Check if item has 'pieces' component
           if (item.pieces) {
-            menuItem.innerHTML = `
+            if (menuDivId === 'california') {
+              menuItem.innerHTML = `
+              <img src="${item.image}" alt="${item.title}">
+              <h4>${item.number}</h4>
+              <h6>${item.title}</h6>
+              <p>${item.pieces}</p>
+            `;
+            }else{
+              menuItem.innerHTML = `
               <img src="${item.image}" alt="${item.title}">
               <h4>${item.number}</h4>
               <h6>${item.title}</h6>
               <p>${item.pieces}</p>
               <p><strong style="color: rgb(210, 55, 57); font-size: 12px;">Disponível só no Buffet à La Carte</strong></p>
             `;
+            }
           }else {
             // For other menu IDs
             menuItem.innerHTML = `
@@ -56,6 +65,30 @@ function fetchAndDisplayMenu(jsonFile, menuDivId, menuDivClass) {
               <h4>${item.number}</h4>
               <h6>${item.title}</h6>
               <p>${item.pieces}</p>
+            `;
+          }
+        }else if (menuDivId === 'new' ) {
+          if (item.obv) {
+            menuItem.innerHTML = `
+              <img src="${item.image}" alt="${item.title}">
+              <h4>${item.number}</h4>
+              <h6>${item.title}</h6>
+              <p>${item.pieces}</p>
+              <p><strong style="color: rgb(210, 55, 57); font-size: 12px;">${item.obv}</strong></p>
+            `;
+          }else if (item.pieces) {  // New condition for 'obv' field
+            menuItem.innerHTML = `
+              <img src="${item.image}" alt="${item.title}">
+              <h4>${item.number}</h4>
+              <h6>${item.title}</h6>
+              <p>${item.pieces}</p>
+            `;
+          }else {
+            // For other menu IDs
+            menuItem.innerHTML = `
+              <img src="${item.image}" alt="${item.title}">
+              <h4>${item.number}</h4>
+              <h6>${item.title}</h6>
             `;
           }
         }else if (menuDivId === 'fried' ) {
@@ -98,6 +131,7 @@ function fetchAndDisplayMenu(jsonFile, menuDivId, menuDivClass) {
 }
 
 
+
 // Sample menu items for search
 const menuItems = [
   { id: 'new_new', name: 'Novidades' },
@@ -113,12 +147,15 @@ const menuItems = [
   { id: 'donburi', name: 'Sobremesas' },
   { id: 'drinks_new', name: 'Bebidas' },
 ];
+
+
 // Function to toggle the dropdown menu
 function toggleDropdown() {
   const dropdown = document.getElementById('dropdown');
   dropdown.classList.toggle('show');
   populateDropdown();
 }
+
 // Function to populate the dropdown with menu items
 function populateDropdown() {
   const dropdown = document.getElementById('dropdown');
@@ -130,11 +167,13 @@ function populateDropdown() {
       dropdown.appendChild(menuItemElement);
   });
 }
+
 // Function to scroll to a section
 function scrollToSection(sectionId) {
   document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
   document.getElementById('dropdown').classList.remove('show'); // Hide dropdown after selection
 }
+
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('button')) {
