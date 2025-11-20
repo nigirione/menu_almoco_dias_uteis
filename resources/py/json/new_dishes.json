@@ -1,5 +1,23 @@
 [
   {
+    "number": "371",
+    "title": "Maki Frito c/ Morangos",
+    "pieces": "4 Pe\u00e7as",
+    "image": "resources/img/371.jpg"
+  },
+  {
+    "number": "230",
+    "title": "Calif\u00f3rnia Gambas Panadas BBQ",
+    "pieces": "4 Pe\u00e7as",
+    "image": "resources/img/230.jpg"
+  },
+  {
+    "number": "233",
+    "title": "Calif\u00f3rnia Frango Panadas BBQ",
+    "pieces": "4 Pe\u00e7as",
+    "image": "resources/img/233.jpg"
+  },
+  {
     "number": "80",
     "title": "Calif\u00f3rnia de Gambas Panadas c/ Molho de Frutas",
     "pieces": "4 Pe\u00e7as",
@@ -22,5 +40,10 @@
     "title": "Calif\u00f3rnia de Manga c/ Molho de Frutas",
     "pieces": "4 Pe\u00e7as",
     "image": "resources/img/84.jpg"
+  },
+  {
+    "number": "V8",
+    "title": "Salada Goma Wakami",
+    "image": "resources/img/V8.jpg"
   }
 ]
